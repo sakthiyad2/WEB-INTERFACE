@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.header {
+  background: linear-gradient(135deg, #0f172a, #1d4ed8);
+  color: white;
+  text-align: center;
+  padding: 50px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.header h3 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #dbeafe;
+}
+
+/* Common cards */
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  color: #1d4ed8;
+  margin-bottom: 20px;
+  border-left: 5px solid #1d4ed8;
+  padding-left: 12px;
+}
+
+.card p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Profile */
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.profile-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 5px solid #1d4ed8;
+}
+
+.profile-details {
+  flex: 1;
+}
+
+.profile-details p {
+  font-size: 18px;
+  margin: 12px 0;
+  color: #374151;
+}
+
+/* About + Technical Skills common container */
+.about-skills-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* About section */
+.about-section {
+  padding-right: 30px;
+  border-right: 2px solid #dbeafe;
+}
+
+.about-section h2,
+.skills-section h2 {
+  color: #1d4ed8;
+  margin-bottom: 20px;
+  border-left: 5px solid #1d4ed8;
+  padding-left: 12px;
+}
+
+.about-section p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Technical Skills */
+.skills-section {
+  padding-left: 10px;
+}
+
+.skills-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skills-list li {
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.skills-list li:hover {
+  background: #1d4ed8;
+  color: white;
+}
+
+/* Career Goal */
+.goal-box {
+  background: #f8fafc;
+  border-left: 5px solid #1d4ed8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Contact */
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.contact-card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #dbeafe;
+}
+
+.contact-card h3 {
+  color: #1d4ed8;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  margin-top: 5px;
+}
+
+.contact-card a {
+  display: inline-block;
+  margin-top: 10px;
+  background: #0f3d91;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-card a:hover {
+  background: #082f6b;
+}
+
+/* Footer */
+.footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .header {
+    padding: 35px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .header h3 {
+    font-size: 18px;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* About + Skills become vertical */
+  .about-skills-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .about-section {
+    padding-right: 0;
+    padding-bottom: 25px;
+    border-right: none;
+    border-bottom: 2px solid #dbeafe;
+  }
+
+  .skills-section {
+    padding-left: 0;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr;
+  }
+}

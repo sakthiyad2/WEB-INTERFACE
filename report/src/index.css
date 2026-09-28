@@ -1,0 +1,4 @@
+html { min-width: 320px; background: #f4f7f8; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+.app-main { flex: 1; }

@@ -1,0 +1,132 @@
+.projects-page {
+  background: #ffffff;
+  min-height: calc(100vh - 72px);
+}
+
+.project-count {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #eef3f7;
+  color: #123b66;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.project-count strong {
+  font-size: 20px;
+}
+
+.project-categories {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.project-categories button {
+  padding: 10px 20px;
+  border: 1px solid #cbd5df;
+  background: #ffffff;
+  color: #334e68;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.project-categories button:hover {
+  border-color: #123b66;
+  color: #123b66;
+}
+
+.project-categories .active-category {
+  background: #123b66;
+  color: #ffffff;
+  border-color: #123b66;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #dfe6ed;
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #9fb4c8;
+  box-shadow: 0 8px 25px rgba(16, 42, 67, 0.08);
+}
+
+.project-card h2 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  font-size: 15px;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.project-technologies {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #356a95;
+  background: #f1f5f8;
+  padding: 8px 10px;
+  border-radius: 5px;
+  margin-bottom: 18px;
+}
+
+.project-button {
+  display: inline-block;
+  width: fit-content;
+  padding: 9px 17px;
+  background: #123b66;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.project-button:hover {
+  background: #0d2d4d;
+}
+
+@media (max-width: 950px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
+
+  .project-categories {
+    gap: 8px;
+  }
+
+  .project-categories button {
+    padding: 9px 15px;
+  }
+}
