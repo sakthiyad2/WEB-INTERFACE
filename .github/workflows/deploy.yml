@@ -35,6 +35,7 @@ jobs:
           set -euo pipefail
           mkdir -p site
           cp index.html site/index.html
+          cp styles.css site/styles.css
 
           build_vite_project() {
             local project_dir="$1"
